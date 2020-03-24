@@ -10,5 +10,13 @@ class App < Sinatra::Base
   get '/square/:number' do
     return (params[:number].to_i * params[:number].to_i).to_s
   end
+  
+  get '/say/:number/:phrase' do
+    result = ''
+    params[:number].to_i.each do |n|
+      result << params[:phrase]
+    end
+    return result
+  end
 
 end
