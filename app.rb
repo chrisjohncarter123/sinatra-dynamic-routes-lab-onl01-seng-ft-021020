@@ -14,7 +14,7 @@ class App < Sinatra::Base
   get '/say/:number/:phrase' do
     result = ''
     params[:number].to_i.each do
-      result << params[:phrase]
+      result << params[:phrase] << " "
     end
     return result
   end
