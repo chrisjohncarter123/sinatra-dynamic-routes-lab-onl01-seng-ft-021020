@@ -33,12 +33,14 @@ class App < Sinatra::Base
     if(operation == "add")
       result = n1 + n2
     elsif (operation == "subtract")
-      
+      result = n1 - n2
     elsif (operation == "multiply")
-      
+      result = n1 * n2
     elsif (operation == "divide")
-      
+      result = n1 / n2
     end
+    
+    return (result.to_s)
   end
 
 end
